@@ -1,0 +1,32 @@
+{
+  "name": "productivity-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "World-class productivity app combining Todoist and Notion",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
+    "mobile": "yarn workspace @productivity-app/mobile",
+    "web": "yarn workspace @productivity-app/web",
+    "backend": "yarn workspace @productivity-app/backend"
+  },
+  "devDependencies": {
+    "prettier": "^3.1.1",
+    "turbo": "^1.11.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": "please-use-yarn",
+    "yarn": ">=1.22.0"
+  },
+  "packageManager": "yarn@1.22.19"
+}
