@@ -15,6 +15,7 @@ import {
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/useAuth';
+import { GlobalSearch } from './global-search';
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: Home },
@@ -39,6 +40,11 @@ export function Sidebar() {
       {/* Logo */}
       <div className="p-6 border-b">
         <h1 className="text-2xl font-bold text-primary">ProductiveApp</h1>
+      </div>
+
+      {/* Search */}
+      <div className="p-4 border-b">
+        <GlobalSearch />
       </div>
 
       {/* Navigation */}
